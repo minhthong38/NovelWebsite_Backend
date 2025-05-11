@@ -18,7 +18,7 @@ exports.hasPurchasedChapter = async (userId, chapterId) => {
 exports.getPurchaseByUserAndChapter = async (userId, chapterId) => {
   return await PurchaseHistory.findOne({ idUser: userId, idChapter: chapterId });
 };
-
+// lấy thống kê doanh thu của tiểu thuyết
 exports.getNovelRevenueStats = async (novelId) => {
   const purchases = await PurchaseHistory.find({ idNovel: novelId });
   
